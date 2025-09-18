@@ -26,12 +26,19 @@ jobs:
     if: github.ref == 'refs/heads/main'
     steps:
       - uses: actions/checkout@v4
-      - uses: azure/setup-kubectl@v3
-        with:
-          version: 'v1.29.0'
+
+      # ✅ Install kubectl manually (avoid setup-kubectl errors)
+      - name: Install kubectl
+        run: |
+          curl -LO "https://dl.k8s.io/release/v1.28.0/bin/linux/amd64/kubectl"
+          chmod +x kubectl
+          sudo mv kubectl /usr/local/bin/
+
+      # ✅ Use your kubeconfig secret
       - run: |
           echo "${{ secrets.KUBE_CONFIG_DATA }}" | base64 --decode > kubeconfig
           export KUBECONFIG=$PWD/kubeconfig
+
           kubectl -n wisecow set image deployment/wisecow-deployment wisecow=${{ secrets.DOCKERHUB_USERNAME }}/wisecow:latest --record || true
           kubectl -n wisecow rollout status deployment/wisecow-deployment --timeout=120s || true
 
