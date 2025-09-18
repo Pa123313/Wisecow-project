@@ -15,9 +15,4 @@ spec:
     matchPaths:
       - path: "/etc/*"
         action: Block
-  network:
-    matchPaths:
-      - path: "dstport==4499"
-        action: Allow
-    action: Block
 
