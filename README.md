@@ -1,29 +1,96 @@
-# Cow wisdom web server
+# 🚀 Wisecow Kubernetes Deployment with CI/CD & Monitoring  
 
-## Prerequisites
+This project demonstrates my hands-on DevOps skills by successfully **containerizing, deploying, automating, and securing the Wisecow application** using modern DevOps practices.  
 
-```
-sudo apt install fortune-mod cowsay -y
-```
+---
 
-## How to use?
+## ✅ What I Did  
+- 🐳 **Dockerized** the Wisecow application.  
+- ☸️ **Deployed** it on a **Kubernetes cluster (Minikube)** with Deployment, Service, and Ingress.  
+- 🔄 Built a full **CI/CD pipeline** using GitHub Actions to automatically build, push, and deploy.  
+- 🖥️ Developed **automation scripts** for **system health monitoring** and **application health checks**.  
 
-1. Run `./wisecow.sh`
-2. Point the browser to server port (default 4499)
+---
 
-## What to expect?
-![wisecow](https://github.com/nyrahul/wisecow/assets/9133227/8d6bfde3-4a5a-480e-8d55-3fef60300d98)
+## 🖼️ Screenshots  
 
-# Problem Statement
-Deploy the wisecow application as a k8s app
+### 1️⃣ Kubernetes Deployment – Services & Ingress  
+Application deployed successfully in Kubernetes with Ingress and Service.  
+![Kubernetes Deployment]  
+<img width="1099" height="587" alt="k8s-deployment" src="https://github.com/user-attachments/assets/3484bac3-6c3d-4e0d-9f0a-0cc5cefa3276" />
 
-## Requirement
-1. Create Dockerfile for the image and corresponding k8s manifest to deploy in k8s env. The wisecow service should be exposed as k8s service.
-2. Github action for creating new image when changes are made to this repo
-3. [Challenge goal]: Enable secure TLS communication for the wisecow app.
 
-## Expected Artifacts
-1. Github repo containing the app with corresponding dockerfile, k8s manifest, any other artifacts needed.
-2. Github repo with corresponding github action.
-3. Github repo should be kept private and the access should be enabled for following github IDs: nyrahul
-Triggering CI/CD run
+### 2️⃣ Wisecow Application Running – Quote Example 1  
+The app is live and serving quotes securely.  
+![Wisecow App Quote 1]  
+<img width="1366" height="768" alt="wisecow-quote1" src="https://github.com/user-attachments/assets/82b040cb-2217-4808-9aea-b17ab0965150" />
+
+
+### 3️⃣ Wisecow Application Running – Quote Example 2  
+Verified multiple responses from the application.  
+![Wisecow App Quote 2]
+<img width="1366" height="768" alt="wisecow-quote2" src="https://github.com/user-attachments/assets/a1a2410f-0caa-40a9-829d-0b929fc6c25a" />
+
+
+---
+
+### 4️⃣ GitHub Actions CI/CD Pipeline  
+Fully automated pipeline:  
+- Builds and pushes Docker image on every commit.  
+- Deploys the updated image to the Kubernetes cluster.  
+All workflow runs succeeded ✅  
+![GitHub Actions Pipeline]
+<img width="1352" height="690" alt="github-actions" src="https://github.com/user-attachments/assets/84537b05-1763-431f-ba01-8dcaced202fb" />
+
+
+---
+
+### 5️⃣ System Health Monitoring Script  
+Created a Bash script to continuously check CPU, memory, disk, and processes.  
+Alerts are logged when thresholds are exceeded.  
+![System Health Script]
+<img width="1099" height="320" alt="health-monitor" src="https://github.com/user-attachments/assets/18b6eefd-644c-4be2-85ca-167c7120fb77" />
+
+
+---
+
+### 6️⃣ Application Health Checker  
+Python script checks if the Wisecow app is up/down based on HTTP status codes.  
+Ensures uptime monitoring for real-time availability.  
+
+---
+
+## 📂 Repository Structure  
+```bash
+├── wisecow/               # Application source code
+├── Dockerfile             # Dockerization of Wisecow App
+├── k8s-manifests/         # Deployment, Service, Ingress YAMLs
+├── .github/workflows/     # GitHub Actions CI/CD pipeline
+├── scripts/               # Bash/Python automation scripts
+├── kubearmor/             # Zero-trust policies (optional)
+└── README.md              # Documentation
+
+
+🛠️ Tools & Technologies Used
+Docker – Containerization
+
+Kubernetes (Minikube) – Deployment & Scaling
+
+GitHub Actions – CI/CD Pipeline
+
+Bash & Python – Automation Scripts
+
+KubeArmor – Zero-Trust Security
+
+🎯 Outcome
+
+The Wisecow app is fully containerized and deployed on Kubernetes.
+
+A working CI/CD pipeline automates build → push → deploy.
+
+Scripts for system monitoring and app health checking ensure reliability.
+
+
+This project showcases my end-to-end DevOps capabilities across automation, container orchestration, CI/CD, and security.
+
+
