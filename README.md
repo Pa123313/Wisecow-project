@@ -23,13 +23,17 @@ Application deployed successfully in Kubernetes with Ingress and Service.
 ### 2️⃣ Wisecow Application Running – Quote Example 1  
 The app is live and serving quotes securely.  
 ![Wisecow App Quote 1]  
-<img width="1366" height="768" alt="wisecow-quote1" src="https://github.com/user-attachments/assets/82b040cb-2217-4808-9aea-b17ab0965150" />
+<img width="1237" height="642" alt="wisecow-quote1" src="https://github.com/user-attachments/assets/3b729040-ffc5-41e7-9246-aec3b818548a" />
+
+
 
 
 ### 3️⃣ Wisecow Application Running – Quote Example 2  
 Verified multiple responses from the application.  
 ![Wisecow App Quote 2]
-<img width="1366" height="768" alt="wisecow-quote2" src="https://github.com/user-attachments/assets/a1a2410f-0caa-40a9-829d-0b929fc6c25a" />
+<img width="1366" height="669" alt="wisecow-quote2" src="https://github.com/user-attachments/assets/88f0dd6c-59e3-47ab-bca3-f3a6a4ab15f4" />
+
+
 
 
 ---
