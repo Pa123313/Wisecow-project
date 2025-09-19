@@ -71,11 +71,12 @@ Ensures uptime monitoring for real-time availability.
 ├── k8s-manifests/         # Deployment, Service, Ingress YAMLs
 ├── .github/workflows/     # GitHub Actions CI/CD pipeline
 ├── scripts/               # Bash/Python automation scripts
-├── kubearmor/             # Zero-trust policies (optional)
+├── kubearmor/             # Zero-trust policies 
 └── README.md              # Documentation
 
 
 🛠️ Tools & Technologies Used
+
 Docker – Containerization
 
 Kubernetes (Minikube) – Deployment & Scaling
